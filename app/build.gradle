@@ -21,6 +21,16 @@ android {
         ext.betaDistributionReleaseNotes = "Release notes are avaliable on Jenkins:"
     }
 
+    signingConfigs {
+        release {
+//            storeFile file("myreleasekey.keystore")
+//            storePassword "password"
+//            keyAlias "MyReleaseKey"
+//            keyPassword "password"
+            v2SigningEnabled false
+        }
+    }
+
     // Currently Added for Retro lambda
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
