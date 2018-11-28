@@ -27,8 +27,8 @@ android {
 //            storePassword "password"
 //            keyAlias "MyReleaseKey"
 //            keyPassword "password"
-            v2SigningEnabled true
-            v1SigningEnabled true
+            v2SigningEnabled false
+            v1SigningEnabled false
         }
     }
 
