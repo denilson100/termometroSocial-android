@@ -17,6 +17,8 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        ext.betaDistributionEmails = "denilson.monteiro.dev@gmail.com"
+        ext.betaDistributionReleaseNotes = "Release notes are avaliable on Jenkins:"
     }
 
     // Currently Added for Retro lambda
