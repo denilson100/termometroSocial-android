@@ -1,5 +1,5 @@
 apply plugin: 'com.android.application'
-
+//apply plugin: 'io.fabric'
 apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
@@ -109,9 +109,13 @@ dependencies {
 
     implementation 'com.google.guava:guava:23.3-android'
 
+//    implementation 'com.google.firebase:firebase-core:16.0.4'
+
     // Testing
     testImplementation 'junit:junit:4.12'
     testImplementation 'org.mockito:mockito-core:2.10.0'
+//    implementation 'com.crashlytics.sdk.android:crashlytics:2.9.5'
+
 }
 
 repositories {
