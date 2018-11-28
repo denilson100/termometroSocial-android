@@ -14,7 +14,7 @@ android {
         applicationId "br.com.mobile10.termometrosocial"
         minSdkVersion 19
         targetSdkVersion 28
-        versionCode 1
+        versionCode getCustomVersionCode()
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         ext.betaDistributionEmails = "denilson.monteiro.dev@gmail.com"
@@ -224,4 +224,9 @@ project.afterEvaluate {
                     }
             }
     }
+}
+
+def getCustomVersionCode() {
+    def date = new Date()
+    return Integer.valueOf(System.env.BUILD_NUMBER ?: date.format('yyMMddHHmm'))
 }
