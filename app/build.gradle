@@ -12,7 +12,7 @@ android {
     buildToolsVersion "28.0.3"
     defaultConfig {
         applicationId "br.com.mobile10.termometrosocial"
-        minSdkVersion 19
+        minSdkVersion 18
         targetSdkVersion 28
         versionCode getCustomVersionCode()
         versionName "1.0"
