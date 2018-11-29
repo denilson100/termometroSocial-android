@@ -78,7 +78,7 @@ dependencies {
     // JSON Converter. Which I used with Retrofit.
     implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
 
-    // Rx Java 2. I used for callback in adapters + with retrofit.
+    // Rx Java 2. I used for callback in adapters + with retrofit
 //    implementation 'io.reactivex.rxjava2:rxjava:2.0.2'
 
     // Rx Android mostly used for AndroidSchedulers.mainThread()
