@@ -21,16 +21,24 @@ android {
         ext.betaDistributionReleaseNotes = "Release notes are avaliable on Jenkins:"
     }
 
-//    signingConfigs {
-//        release {
-//            storeFile file("app/key/Keystore")
-//            storePassword "password"
-//            keyAlias "MyReleaseKey"
-//            keyPassword "password"
-//            v2SigningEnabled false
-//            v1SigningEnabled false
-//        }
-//    }
+    signingConfigs {
+        release {
+            storeFile file("app.Keystore") // Your Keystore file path
+            storePassword "de2323" // Your Keystore password
+            keyAlias "TermometroSocial" // Key Alias for this application
+            keyPassword "de2323" // Password for the Key
+
+//            val signing = project.rootProject.properties("signing.properties")
+//            if (signing != null) {
+//                create("default") {
+//                    storeFile = file(signing.getProperty("storeFile"))
+//                    storePassword = signing.getProperty("storePassword")
+//                    keyAlias = signing.getProperty("keyAlias")
+//                    keyPassword = signing.getProperty("keyPassword")
+//                }
+//            }
+        }
+   }
 
     // Currently Added for Retro lambda
     compileOptions {
