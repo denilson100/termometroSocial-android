@@ -23,12 +23,12 @@ android {
 
     signingConfigs {
         release {
-//            storeFile file("myreleasekey.keystore")
-//            storePassword "password"
-//            keyAlias "MyReleaseKey"
-//            keyPassword "password"
-            v2SigningEnabled false
-            v1SigningEnabled false
+            storeFile file("app/key/Keystore")
+            storePassword "password"
+            keyAlias "MyReleaseKey"
+            keyPassword "password"
+//            v2SigningEnabled false
+//            v1SigningEnabled false
         }
     }
 
