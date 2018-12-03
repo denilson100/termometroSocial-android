@@ -47,6 +47,8 @@ android {
             testCoverageEnabled true
             debuggable true
             signingConfig signingConfigs.debug
+            applicationIdSuffix '.dev'
+
         }
         release {
             minifyEnabled false
