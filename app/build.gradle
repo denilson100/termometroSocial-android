@@ -10,6 +10,8 @@ apply plugin: 'jacoco'
 android {
     compileSdkVersion 28
     buildToolsVersion "28.0.3"
+    flavorDimensions "default"
+
     defaultConfig {
         applicationId "br.com.mobile10.termometrosocial"
         minSdkVersion 18 // -
@@ -20,7 +22,6 @@ android {
         ext.betaDistributionEmails = "denilson.monteiro.dev@gmail.com"
         ext.betaDistributionReleaseNotes = "Release notes are avaliable on Jenkins:"
     }
-
     signingConfigs {
         debug {
             storeFile file("$rootDir/distribution/debug.keystore")
@@ -28,27 +29,32 @@ android {
             keyAlias 'androiddebugkey'
             keyPassword 'android'
         }
+
         release {
             storeFile file("$rootDir/distribution/release.keystore")
             storePassword 'de2323'
             keyAlias 'TermometroSocial'
             keyPassword 'de2323'
         }
-    }
 
+        develop {
+            storeFile file("$rootDir/distribution/develop.keystore")
+            storePassword 'android'
+            keyAlias 'androiddevelopkey'
+            keyPassword 'android'
+        }
+    }
     // Currently Added for Retro lambda
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
-
     buildTypes {
         debug {
             testCoverageEnabled true
-            debuggable true
+            debuggable false
             signingConfig signingConfigs.debug
             applicationIdSuffix '.dev'
-
         }
         release {
             minifyEnabled false
@@ -56,15 +62,16 @@ android {
             signingConfig signingConfigs.release
         }
     }
-
-    productFlavors {
-    }
-
     testOptions {
         unitTests.all {
             jacoco {
                 includeNoLocationClasses = true
             }
+        }
+    }
+    productFlavors {
+        develop {
+            applicationIdSuffix '.develop'
         }
     }
 }
@@ -96,7 +103,8 @@ dependencies {
     implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
 
     // Rx Java 2. I used for callback in adapters + with retrofit
-//    implementation 'io.reactivex.rxjava2:rxjava:2.0.2'
+
+    //    implementation 'io.reactivex.rxjava2:rxjava:2.0.2'
 
     // Rx Android mostly used for AndroidSchedulers.mainThread()
 
