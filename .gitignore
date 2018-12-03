@@ -1,7 +1,12 @@
 *.iml
 .gradle
+<<<<<<< HEAD
 /gradle.properties
 /local.properties
+=======
+gradle.properties
+local.properties
+>>>>>>> master
 /.idea/caches/build_file_checksums.ser
 /.idea/libraries
 /.idea/modules.xml
