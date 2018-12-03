@@ -49,9 +49,6 @@ android {
         }
         release {
             storeFile file("$rootDir/distribution/release.keystore")
-//            storePassword System.env.RELEASE_STORE_PASSWORD
-//            keyAlias System.env.RELEASE_KEY_ALIAS
-//            keyPassword System.env.RELEASE_KEY_PASSWORD
             storePassword 'de2323'
             keyAlias 'TermometroSocial'
             keyPassword 'de2323'
