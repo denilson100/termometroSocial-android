@@ -38,9 +38,9 @@ android {
         }
 
         develop {
-            storeFile file("$rootDir/distribution/develop.keystore")
+            storeFile file("$rootDir/distribution/dev.keystore")
             storePassword 'android'
-            keyAlias 'androiddevelopkey'
+            keyAlias 'androiddevkey'
             keyPassword 'android'
         }
     }
@@ -71,7 +71,7 @@ android {
     }
     productFlavors {
         develop {
-            applicationIdSuffix '.develop'
+            applicationIdSuffix '.dev'
         }
         prod{}
     }
