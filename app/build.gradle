@@ -17,7 +17,7 @@ android {
         minSdkVersion 18 // -
         targetSdkVersion 28
         versionCode getCustomVersionCode()
-        versionName "1.0"
+        versionName "1.1"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         ext.betaDistributionEmails = "denilson.monteiro.dev@gmail.com"
         ext.betaDistributionReleaseNotes = "Release notes are avaliable on Jenkins:"
